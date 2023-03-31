@@ -12466,3 +12466,6 @@
   .text-justify{
     text-align: justify!important;
   }
+  .li-style-on{
+    list-style: circle!important;
+  }
