@@ -15,6 +15,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="./resources/js/jquery-3.6.4.min.js"></script>
     <title>OFC</title>
 </head>
 
@@ -198,7 +199,7 @@
                                     estadisticas sobre la plataforma en la que juegan los jugadores.</p>
                             </li>
 
-                            <li  class="li-style-on">
+                            <li data-aos="fade-up" class="li-style-on">
                                 <p class="text-justify">
                                     Esta informacion se almacenara en una base de datos relacional MySQL y habra una
                                     aplicacion
@@ -211,37 +212,698 @@
                                 </p>
                             </li>
                         </ul>
-
-
                     </div>
                 </div>
             </div>
         </section>
         <!--FIN Objetivos-->
         <!--Tarea-->
-        <section class="ts-block ts-xs-text-center pb-0" id="tarea">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="tarea">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">T</span>areas</h2>
                 </div>
+                <!-- Comienzo tabla -->
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <button type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Ver planificacion
-                          </button>
-                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <iframe src="retoFinalPlanner.html" width="1100" height="600"></iframe>
-                                </div>
-                              </div>
+                        <div class="tasklist">
+                            <div class="tasklist-table">
+                                <table data-aos="fade-up" cellspacing="0" cellpadding="0" border="1"
+                                    class="table table-dark table-striped table-responsive-sm table-responsive-md table-responsive-lg ">
+                                    <tr class="header" align="left">
+                                        <th>
+                                            <span>WBS</span>
+                                        </th>
+                                        <th>
+                                            <span>Nombre</span>
+                                        </th>
+                                        <th>
+                                            <span>Comienzo</span>
+                                        </th>
+                                        <th>
+                                            <span>Fin</span>
+                                        </th>
+                                        <th>
+                                            <span>Duracion</span>
+                                        </th>
+                                        <th>
+                                            <span>Progreso</span>
+                                        </th>
+                                        <th>
+                                            <span>Coste hora</span>
+                                        </th>
+                                        <th>
+                                            <span>Asignado a</span>
+                                        </th>
+                                    </tr>
+                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task1" style="margin-left: 0px" id="task1">
+                                                <span>DISEÑO</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Feb 27</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>24d 7h </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>1.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task2" style="margin-left: 18px" id="task2">
+                                                <span>Diseño de proyecto</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Feb 27</span>
+                                        </td>
+                                        <td>
+                                            <span>Feb 28</span>
+                                        </td>
+                                        <td>
+                                            <span>7d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>1.428€</span>
+                                        </td>
+                                        <td>ps, dui, as, m</td>
+                                    </tr>
+                                    <tr class="odd" style="">
+                                        <td>
+                                            <span>1.2</span>
+                                        </td>
+                                        <td>
+                                            <a name="task3" style="margin-left: 18px" id="task3">
+                                                <span>Diseño arquitectura de software</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Feb 28</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 1</span>
+                                        </td>
+                                        <td>
+                                            <span>1d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>234,67€</span>
+                                        </td>
+                                        <td>ps, dui, as</td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>1.3</span>
+                                        </td>
+                                        <td>
+                                            <a name="task4" style="margin-left: 18px" id="task4">
+                                                <span>Diseño de modelo de datos</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 1</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 6</span>
+                                        </td>
+                                        <td>
+                                            <span>6d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>792€</span>
+                                        </td>
+                                        <td>ps[80], as[80]</td>
+                                    </tr>
+                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>1.4</span>
+                                        </td>
+                                        <td>
+                                            <a name="task5" style="margin-left: 18px" id="task5">
+                                                <span>CLIENTE</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 1</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>6d 7h </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>1.4.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task6" style="margin-left: 36px" id="task6">
+                                                <span>Diseño casos de uso</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 1</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 8</span>
+                                        </td>
+                                        <td>
+                                            <span>2d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>264€</span>
+                                        </td>
+                                        <td>ps[20], as[20]</td>
+                                    </tr>
+                                    <tr class="odd" style="">
+                                        <td>
+                                            <span>1.4.2</span>
+                                        </td>
+                                        <td>
+                                            <a name="task7" style="margin-left: 36px" id="task7">
+                                                <span>Diseño de diagrama de clases</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 6</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 13</span>
+                                        </td>
+                                        <td>
+                                            <span>4d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>528€</span>
+                                        </td>
+                                        <td>ps[40], as[40]</td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>1.4.3</span>
+                                        </td>
+                                        <td>
+                                            <a name="task8" style="margin-left: 36px" id="task8">
+                                                <span>Diseño de ventanas</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 13</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>7h </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>220€</span>
+                                        </td>
+                                        <td>ps, dui, as</td>
+                                    </tr>
+                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>1.5</span>
+                                        </td>
+                                        <td>
+                                            <a name="task9" style="margin-left: 18px" id="task9">
+                                                <span>SERVER</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 6</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 13</span>
+                                        </td>
+                                        <td>
+                                            <span>4d </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>1.5.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task10" style="margin-left: 36px" id="task10">
+                                                <span>Diseño de diagrama de clases</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 6</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 13</span>
+                                        </td>
+                                        <td>
+                                            <span>4d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>528€</span>
+                                        </td>
+                                        <td>ps[40], as[40]</td>
+                                    </tr>
+                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>2</span>
+                                        </td>
+                                        <td>
+                                            <a name="task11" style="margin-left: 0px" id="task11">
+                                                <span>IMPLEMENTACION</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 27</span>
+                                        </td>
+                                        <td>
+                                            <span>30d </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>2.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task12" style="margin-left: 18px" id="task12">
+                                                <span>CLIENTE</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 27</span>
+                                        </td>
+                                        <td>
+                                            <span>18d </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="odd" style="">
+                                        <td>
+                                            <span>2.1.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task13" style="margin-left: 36px" id="task13">
+                                                <span>Desarrollo de ventanas</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 20</span>
+                                        </td>
+                                        <td>
+                                            <span>8d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>704,21€</span>
+                                        </td>
+                                        <td>pj[50], pj[50], pj[90]</td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>2.1.2</span>
+                                        </td>
+                                        <td>
+                                            <a name="task14" style="margin-left: 36px" id="task14">
+                                                <span>Desarrollo de comunicacion cliente/servidor</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 27</span>
+                                        </td>
+                                        <td>
+                                            <span>10d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>1.131,49€</span>
+                                        </td>
+                                        <td>pj[50], ps[55]</td>
+                                    </tr>
+                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>2.2</span>
+                                        </td>
+                                        <td>
+                                            <a name="task15" style="margin-left: 18px" id="task15">
+                                                <span>SERVER</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 27</span>
+                                        </td>
+                                        <td>
+                                            <span>12d </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>2.2.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task16" style="margin-left: 36px" id="task16">
+                                                <span>Desarrollo de comunicacion cliente/servidor</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 27</span>
+                                        </td>
+                                        <td>
+                                            <span>9d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>996,84€</span>
+                                        </td>
+                                        <td>pj[50], ps[45]</td>
+                                    </tr>
+                                    <tr class="odd" style="">
+                                        <td>
+                                            <span>2.2.2</span>
+                                        </td>
+                                        <td>
+                                            <a name="task17" style="margin-left: 36px" id="task17">
+                                                <span>Implementacion de persistencia</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Mar 21</span>
+                                        </td>
+                                        <td>
+                                            <span>3d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>264€</span>
+                                        </td>
+                                        <td>pj[50], pj[10]</td>
+                                    </tr>
+                                    <tr class="even" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>3</span>
+                                        </td>
+                                        <td>
+                                            <a name="task18" style="margin-left: 0px" id="task18">
+                                                <span>VALIDACION</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Apr 25</span>
+                                        </td>
+                                        <td>
+                                            <span>40d </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>3.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task19" style="margin-left: 18px" id="task19">
+                                                <span>CLIENTE</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Apr 18</span>
+                                        </td>
+                                        <td>
+                                            <span>18d </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>3.1.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task20" style="margin-left: 36px" id="task20">
+                                                <span>Desarrollo de test unitario</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Apr 18</span>
+                                        </td>
+                                        <td>
+                                            <span>18d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>7.920,31€</span>
+                                        </td>
+                                        <td>dux[70]</td>
+                                    </tr>
+                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>3.2</span>
+                                        </td>
+                                        <td>
+                                            <a name="task21" style="margin-left: 18px" id="task21">
+                                                <span>SERVER</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Apr 4</span>
+                                        </td>
+                                        <td>
+                                            <span>12d </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="even" style="">
+                                        <td>
+                                            <span>3.2.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task22" style="margin-left: 36px" id="task22">
+                                                <span>Desarrollo de test unitario</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Mar 14</span>
+                                        </td>
+                                        <td>
+                                            <span>Apr 4</span>
+                                        </td>
+                                        <td>
+                                            <span>12d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>2.640€</span>
+                                        </td>
+                                        <td>pj[50], dux[30]</td>
+                                    </tr>
+                                    <tr class="odd" style="">
+                                        <td>
+                                            <span>3.3</span>
+                                        </td>
+                                        <td>
+                                            <a name="task23" style="margin-left: 18px" id="task23">
+                                                <span>Desarrollo de test integrados</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Apr 18</span>
+                                        </td>
+                                        <td>
+                                            <span>Apr 25</span>
+                                        </td>
+                                        <td>
+                                            <span>10d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>2.640€</span>
+                                        </td>
+                                        <td>pj, dux</td>
+                                    </tr>
+                                    <tr class="even" style="&#10;            font-weight: bold;&#10;          ">
+                                        <td>
+                                            <span>4</span>
+                                        </td>
+                                        <td>
+                                            <a name="task24" style="margin-left: 0px" id="task24">
+                                                <span>IMPLANTACION</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Apr 25</span>
+                                        </td>
+                                        <td>
+                                            <span>Apr 26</span>
+                                        </td>
+                                        <td>
+                                            <span>2d </span>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="odd" style="">
+                                        <td>
+                                            <span>4.1</span>
+                                        </td>
+                                        <td>
+                                            <a name="task25" style="margin-left: 18px" id="task25">
+                                                <span>Implantacion del proyecto</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>Apr 25</span>
+                                        </td>
+                                        <td>
+                                            <span>Apr 26</span>
+                                        </td>
+                                        <td>
+                                            <span>2d </span>
+                                        </td>
+                                        <td>
+                                            <span>0%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>208€</span>
+                                        </td>
+                                        <td>pj, pj, ps</td>
+                                    </tr>
+                                </table>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -255,33 +917,285 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <p class="text-justify">En este mundo empresarial tan fluctuante mueres o evolucionas, nosotros
-                            OFC no hemos sido
-                            menos y hemos evolucionado al expandirnos, hemos absorbido a la empresa sussy baka y la
-                            hemos añadido a nuestras filas, con nuestra expansión ahora tenemos la capacidad de
-                            encargarnos de propuestas para clientes de importantes como puede ser itch.io, además de
-                            nuestros proyectos.
-                        </p>
+                        <div class="resourcelist">
+                            <div class="resourcelist-table">
+                                <table cellspacing="0" cellpadding="0" border="1" width="100%" class="table table-dark table-striped  table-responsive-sm table-responsive-md table-responsive-lg ">
+                                    <tr class="header" align="left">
+                                        <th>
+                                            <span>Name</span>
+                                        </th>
+                                        <th>
+                                            <span>Short name</span>
+                                        </th>
+                                        <th>
+                                            <span>Type</span>
+                                        </th>
+                                        <th>
+                                            <span>Group</span>
+                                        </th>
+                                        <th>
+                                            <span>Email</span>
+                                        </th>
+                                        <th>
+                                            <span>Cost</span>
+                                        </th>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>
+                                            <a name="res-7" id="res-7">
+                                                <span>Charlie</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>t</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>tester</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>14</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>
+                                            <a name="res-2" id="res-2">
+                                                <span>Henri</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>pj</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>programador junior</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>11</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>
+                                            <a name="res-1" id="res-1">
+                                                <span>Iker</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>pj</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>programador junior</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>11</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>
+                                            <a name="res-3" id="res-3">
+                                                <span>Ioritz</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>pj</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>programador junior</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>11</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>
+                                            <a name="res-4" id="res-4">
+                                                <span>Jeanpierr</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>pj</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>programador junior</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>11</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>
+                                            <a name="res-9" id="res-9">
+                                                <span>Jose</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>m</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>marketing</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>14</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>
+                                            <a name="res-10" id="res-10">
+                                                <span>Leire</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>dux</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>diseñador de experiencias de usuario</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>55</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>
+                                            <a name="res-8" id="res-8">
+                                                <span>Markel</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>as</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>analista de software</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>16</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>
+                                            <a name="res-5" id="res-5">
+                                                <span>Sofia</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>ps</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>programador senior</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>17</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>
+                                            <a name="res-6" id="res-6">
+                                                <span>Teresa</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span>dui</span>
+                                        </td>
+                                        <td>
+                                            <span>Work</span>
+                                        </td>
+                                        <td>
+                                            <span>diseñador de interfaz de usuario</span>
+                                        </td>
+                                        <td>
+                                            <a href="mailto:">
+                                                <span></span>
+                                            </a>
+                                        </td>
+                                        <td align="right">
+                                            <span>55</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!--FIN Recuro-->
         <!--Cronograma-->
-        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="cronograma">
+        <section data-aos="fade-right" class="ts-block ts-xs-text-center pb-0" id="cronograma">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">C</span>ronograma</h2>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <p class="text-justify">En este mundo empresarial tan fluctuante mueres o evolucionas, nosotros
-                            OFC no hemos sido
-                            menos y hemos evolucionado al expandirnos, hemos absorbido a la empresa sussy baka y la
-                            hemos añadido a nuestras filas, con nuestra expansión ahora tenemos la capacidad de
-                            encargarnos de propuestas para clientes de importantes como puede ser itch.io, además de
-                            nuestros proyectos.
-                        </p>
+                       
                     </div>
                 </div>
             </div>
@@ -296,81 +1210,81 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
                         <p class="text-justify">
-                        <h3 class="text-center">Presupuesto general</h3>
-                        <h3 class="text-center">Presupuesto del material</h3>
+                            <h3 class="text-center">Presupuesto general</h3>
+                            <h3 class="text-center">Presupuesto del material</h3>
 
-                        <div>
-                            <table class="table">
-                                <thead class="table-primary">
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Unidades</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">Precio Total</th>
-                                </thead>
-                                <tbody class="table-light">
-                                    <tr>
-                                        <td>RAX QS4-11E2</td>
-                                        <td class="text-end">1</td>
-                                        <td class="text-end">3.900,00€</td>
-                                        <td class="text-end">3.900,00€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>WP RWA-06604 Armario Mural 6U</td>
-                                        <td class="text-end">1</td>
-                                        <td class="text-end">82,07€</td>
-                                        <td class="text-end">82,07€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Dream Machine Pro (Router)</td>
-                                        <td class="text-end">1</td>
-                                        <td class="text-end">379,00€</td>
-                                        <td class="text-end">379,00€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Regleta</td>
-                                        <td class="text-end">1</td>
-                                        <td class="text-end">19,99€</td>
-                                        <td class="text-end">19,99€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ethernet CAT 8 RJ45 1m</td>
-                                        <td class="text-end">1</td>
-                                        <td class="text-end">7,64€</td>
-                                        <td class="text-end">7,64€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ethernet CAT 8 RJ45 10m</td>
-                                        <td class="text-end">8</td>
-                                        <td class="text-end">23,79€</td>
-                                        <td class="text-end">190,32€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Servicio Fibra 1Gb</td>
-                                        <td class="text-end">1</td>
-                                        <td class="text-end">43,90€</td>
-                                        <td class="text-end">43,90€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SAI 2000VA</td>
-                                        <td class="text-end">1</td>
-                                        <td class="text-end">689,89€</td>
-                                        <td class="text-end">689,89€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>HDD 4TB 3.5" SATA</td>
-                                        <td class="text-end">1</td>
-                                        <td class="text-end">159,90€</td>
-                                        <td class="text-end">159,90€</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td class="table-danger text-end" colspan="3">Total</td>
-                                        <td class="table-warning text-end">5.952,41€</td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                            <div>
+                                <table class="table">
+                                    <thead class="table-primary">
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Unidades</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Precio Total</th>
+                                    </thead>
+                                    <tbody class="table-light">
+                                        <tr>
+                                            <td>RAX QS4-11E2</td>
+                                            <td class="text-end">1</td>
+                                            <td class="text-end">3.900,00€</td>
+                                            <td class="text-end">3.900,00€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WP RWA-06604 Armario Mural 6U</td>
+                                            <td class="text-end">1</td>
+                                            <td class="text-end">82,07€</td>
+                                            <td class="text-end">82,07€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dream Machine Pro (Router)</td>
+                                            <td class="text-end">1</td>
+                                            <td class="text-end">379,00€</td>
+                                            <td class="text-end">379,00€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Regleta</td>
+                                            <td class="text-end">1</td>
+                                            <td class="text-end">19,99€</td>
+                                            <td class="text-end">19,99€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ethernet CAT 8 RJ45 1m</td>
+                                            <td class="text-end">1</td>
+                                            <td class="text-end">7,64€</td>
+                                            <td class="text-end">7,64€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ethernet CAT 8 RJ45 10m</td>
+                                            <td class="text-end">8</td>
+                                            <td class="text-end">23,79€</td>
+                                            <td class="text-end">190,32€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Servicio Fibra 1Gb</td>
+                                            <td class="text-end">1</td>
+                                            <td class="text-end">43,90€</td>
+                                            <td class="text-end">43,90€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SAI 2000VA</td>
+                                            <td class="text-end">1</td>
+                                            <td class="text-end">689,89€</td>
+                                            <td class="text-end">689,89€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>HDD 4TB 3.5" SATA</td>
+                                            <td class="text-end">1</td>
+                                            <td class="text-end">159,90€</td>
+                                            <td class="text-end">159,90€</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td class="table-danger text-end" colspan="3">Total</td>
+                                            <td class="table-warning text-end">5.952,41€</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
 
                         </p>
                     </div>
@@ -568,8 +1482,17 @@
 <script type='text/javascript' src="resources/js/bootstrap.min.js"></script>
 <script type='text/javascript' src="resources/js/aos.js"></script>
 <script>
+    $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+            var file = 'views/' + $(this).data('include') + '.html'
+            $(this).load(file)
+        })
+    });
+</script>
+<script>
     AOS.init();
-  </script>
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
     integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
