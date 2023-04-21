@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./resources/css/aos.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -136,7 +137,7 @@
         </section>
         <!--FIN NOSOTROS-->
         <!--Objetivos-->
-        <section class="ts-block ts-xs-text-center pb-0" id="objetivo">
+        <section data-aos="fade-right" class="ts-block ts-xs-text-center pb-0" id="objetivo">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">O</span>bjetivos</h2>
@@ -158,7 +159,7 @@
                         </p>
 
                         <ul>
-                            <li class="li-style-on">
+                            <li data-aos="fade-up" class="li-style-on">
                                 <p class="text-justify">En la aplicación habrá distintos usuarios (usuarios
                                     convencionales, críticos y administradores) en el que cada uno podrá iniciar sesión,
                                     hasta 5000 usuarios simultáneos, podrá recoger la lista de juegos que tiene en una
@@ -170,7 +171,7 @@
                                     sido añadidos a la lista por el mismo.
                                 </p>
                             </li>
-                            <li class="li-style-on">
+                            <li data-aos="fade-up" class="li-style-on">
                                 <p class="text-justify">Habrá una librería de juegos en el que se podrá añadir un juego
                                     a una lista privada, también se podrá valorar un juego, esta valoración será
                                     diferente si el usuario es un usuario convencional o si es un crítico. También podrá
@@ -179,14 +180,14 @@
                                     progreso del mismo, podrá subir un video para verificar la partida en caso de que
                                     sea un speedrun y habrá un blog para comentar guías o problemas que ha habido.</p>
                             </li>
-                            <li class="li-style-on">
+                            <li data-aos="fade-up" class="li-style-on">
                                 <p class="text-justify"> Habrá una tabla de estadísticas que tendrá que mostrar el juego
                                     más jugado y la media de tiempo que se tarda en pasarse los juegos y cuanto se tarda
                                     en completarlo 100%, estadísticas sobre la plataforma en la que juegan los
                                     jugadores.</p>
                             </li>
 
-                            <li class="li-style-on">
+                            <li  class="li-style-on">
                                 <p class="text-justify">
                                     Esta información se almacenará en una base de datos y habrá una aplicación servidor
                                     que se encarga de la gestión de la información. Parte de la información que se
@@ -223,7 +224,7 @@
         </section>
         <!--FIN Tarea-->
         <!--Recuro-->
-        <section class="ts-block ts-xs-text-center pb-0" id="recursos">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="recursos">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">Recursos</span> Humanos</h2>
@@ -243,7 +244,7 @@
         </section>
         <!--FIN Recuro-->
         <!--Cronograma-->
-        <section class="ts-block ts-xs-text-center pb-0" id="cronograma">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="cronograma">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">C</span>ronograma</h2>
@@ -263,7 +264,7 @@
         </section>
         <!--FIN Cronograma-->
         <!--Presupuesto-->
-        <section class="ts-block ts-xs-text-center pb-0" id="presupuesto">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="presupuesto">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">P</span>resupuesto</h2>
@@ -273,23 +274,78 @@
                         <p class="text-justify">
                         <h3 class="text-center">Presupuesto general</h3>
                         <h3 class="text-center">Presupuesto del material</h3>
-
-                        <table class="table">
-                            <thead class="table-primary">
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Unidades</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Precio Total</th>
-                            </thead>
-                            <tbody class="table-light">
-                                <tr>
-                                    <td>RAX QS4-11E2</td>
-                                    <td class="text-end">1</td>
-                                    <td class="text-end">3.900,00€</td>
-                                    <td class="text-end">3.900,00€</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div>
+                            <table class="table">
+                                <thead class="table-primary">
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Unidades</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Precio Total</th>
+                                </thead>
+                                <tbody class="table-light">
+                                    <tr>
+                                        <td>RAX QS4-11E2</td>
+                                        <td class="text-end">1</td>
+                                        <td class="text-end">3.900,00€</td>
+                                        <td class="text-end">3.900,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WP RWA-06604 Armario Mural 6U</td>
+                                        <td class="text-end">1</td>
+                                        <td class="text-end">82,07€</td>
+                                        <td class="text-end">82,07€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dream Machine Pro (Router)</td>
+                                        <td class="text-end">1</td>
+                                        <td class="text-end">379,00€</td>
+                                        <td class="text-end">379,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Regleta</td>
+                                        <td class="text-end">1</td>
+                                        <td class="text-end">19,99€</td>
+                                        <td class="text-end">19,99€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ethernet CAT 8 RJ45 1m</td>
+                                        <td class="text-end">1</td>
+                                        <td class="text-end">7,64€</td>
+                                        <td class="text-end">7,64€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ethernet CAT 8 RJ45 10m</td>
+                                        <td class="text-end">8</td>
+                                        <td class="text-end">23,79€</td>
+                                        <td class="text-end">190,32€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Servicio Fibra 1Gb</td>
+                                        <td class="text-end">1</td>
+                                        <td class="text-end">43,90€</td>
+                                        <td class="text-end">43,90€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SAI 2000VA</td>
+                                        <td class="text-end">1</td>
+                                        <td class="text-end">689,89€</td>
+                                        <td class="text-end">689,89€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HDD 4TB 3.5" SATA</td>
+                                        <td class="text-end">1</td>
+                                        <td class="text-end">159,90€</td>
+                                        <td class="text-end">159,90€</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="table-danger text-end" colspan="3">Total</td>
+                                        <td class="table-warning text-end">5.952,41€</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
                         </p>
                     </div>
                 </div>
@@ -297,7 +353,7 @@
         </section>
         <!--FIN Presupuesto-->
         <!--Seguimiento-->
-        <section class="ts-block ts-xs-text-center pb-0" id="seguimiento">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="seguimiento">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">S</span>eguimiento</h2>
@@ -320,7 +376,7 @@
         </section>
         <!--FIN Seguimiento-->
         <!--Evaluacion-->
-        <section class="ts-block ts-xs-text-center pb-0" id="evaluacion">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="evaluacion">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">E</span>valuación</h2>
@@ -344,7 +400,7 @@
         </section>
         <!--FIN Seguimiento-->
         <!--Anexo-->
-        <section class="ts-block ts-xs-text-center pb-0" id="anexo">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="anexo">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">A</span>nexo</h2>
@@ -364,7 +420,7 @@
             </div>
         </section>
         <!--FIN Anexo-->
-        <footer class="mt-5">
+        <footer data-aos="fade-up" class="mt-5">
             <section class="ts-block" id="contacto">
                 <div class="container">
                     <div class="text-center mt-5 mb-5">
@@ -490,6 +546,10 @@
     </div>
 </body>
 <script type='text/javascript' src="resources/js/bootstrap.min.js"></script>
+<script type='text/javascript' src="resources/js/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
     integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
