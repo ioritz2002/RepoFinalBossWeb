@@ -22,11 +22,32 @@
 /*
  * Header
  */
+ table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+table::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+table::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);        /* color of the tracking area */
+}
+
+table::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(0, 0, 0);  /* creates padding around scroll thumb */
+}
+
 table.proj-header {
  border: 0;
  margin: 0;
  width: auto;
 }
+
 
 table.proj-header .header {
  font-weight: bold;
