@@ -434,7 +434,7 @@
                                 </p>
                             </li>
                             <li data-aos="fade-up" class="li-style-on">
-                                <p class="text-justify">Habrá una librería de juegos en el que se podrá añadir un juego
+                                <p class="text-justify">Librería de juegos en el que se podrá añadir un juego
                                     a una lista privada, también se podrá valorar un juego, esta valoración será
                                     diferente si el usuario es un usuario convencional o si es un crítico. También podrá
                                     añadir otra información como los periféricos con los que ha jugado, añadir el tiempo
@@ -443,7 +443,7 @@
                                     sea un speedrun y habrá un blog para comentar guías o problemas que ha habido.</p>
                             </li>
                             <li data-aos="fade-up" class="li-style-on">
-                                <p class="text-justify"> Habrá una tabla de estadísticas que tendrá que mostrar el juego
+                                <p class="text-justify"> Tabla de estadísticas que tendrá que mostrar el juego
                                     más jugado y la media de tiempo que se tarda en pasarse los juegos y cuanto se tarda
                                     en completarlo 100%, estadísticas sobre la plataforma en la que juegan los
                                     jugadores.</p>
@@ -455,6 +455,21 @@
                                     que se encarga de la gestión de la información. Parte de la información que se
                                     almacena (progreso, periféricos y la plataforma en la que se juega) se venderán a
                                     empresas que estén interesadas en esta información.
+                                </p>
+                            </li>
+                            <li data-aos="fade-up" class="li-style-on">
+                                <p class="text-justify">
+                                    El servidor estará en un servidor hosteado por nosotros ya que puede ser más
+                                    rentable a
+                                    largo plazo que alquilar un servidor de un proveedor de servicios en la nube como
+                                    AWS (Amazon Web Services). Las razones de comprar nuestro hardware, es que tenemos
+                                    un mayor control sobre él, lo que nos
+                                    permite personalizarlo para adaptarlo a nuestras necesidades específicas,
+                                    implementar medidas de seguridad y cumplimiento y reducir el tiempo de inactividad.
+                                    Además, en algunos casos, un servidor físico puede proporcionar un mejor rendimiento
+                                    que un servidor virtual alquilado. Aunque hay beneficios en alquilar un servidor de
+                                    un proveedor en la nube, si buscamos una solución más rentable y personalizable,
+                                    comprar nuestro hardware puede ser la mejor opción para nuestra aplicación.
                                 </p>
                             </li>
                         </ul>
@@ -2169,7 +2184,7 @@
                             <tfoot>
                                 <tr>
                                     <td colspan="3">Total</td>
-                                    <td>5.952,41€</td>
+                                    <td>5.463,71€</td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -2196,6 +2211,36 @@
                                         <td></td>
                                         <td>TOTAL</td>
                                         <td>25.972,23€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="offset-4 col-sm-5 col-md-6 col-xl-7">
+                        <div class="table-responsive ">
+                            <caption>Presupuesto total</caption>
+                            <table class="table table-dark">
+                                <tbody>
+                                    <tr>
+                                        <!-- <th scope="row">1</th> -->
+                                        <td>Presupuesto Tareas</td>
+                                        <td></td>
+                                        <td>20.499,52€</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- <th scope="row">2</th> -->
+                                        <td>Presupuesto Material
+                                            <br />
+                                            Servidor premontado
+                                        </td>
+                                        <td></td>
+                                        <td>~6.000,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- <th scope="row">3</th> -->
+                                        <td></td>
+                                        <td>TOTAL</td>
+                                        <td>~26.499,52€</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -2257,17 +2302,72 @@
     <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="anexo">
         <div class="container">
             <div class="ts-title text-center mb-5">
-                <h2><span class="text-color-gN">A</span>nexo</h2>
+                <h2><span class="text-color-gN">A</span>nexo - Documentación técnica</h2>
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-xl-12">
+                    <h3>1. Introducción</h3>
                     <p class="text-justify">
-                        En este mundo empresarial tan fluctuante mueres o evolucionas, nosotros
-                        OFC no hemos sido
-                        menos y hemos evolucionado al expandirnos, hemos absorbido a la empresa sussy baka y la
-                        hemos añadido a nuestras filas, con nuestra expansión ahora tenemos la capacidad de
-                        encargarnos de propuestas para clientes de importantes como puede ser itch.io, además de
-                        nuestros proyectos.
+                        Esta es la documentación técnica del programa web desarrollado por OFC, diseñado para guardar el
+                        progreso de los juegos, agregar reseñas, subir videos de speedruns, y registrar qué periféricos
+                        se utilizaron para completarlos.
+                        La plataforma está construida con una arquitectura de microservicios que permite la
+                        escalabilidad y el manejo de grandes cantidades de datos de usuarios y juegos.
+                        La plataforma se compone de diferentes módulos que trabajan juntos para proporcionar una
+                        experiencia de usuario fluida y segura. Los módulos principales incluyen la autenticación de
+                        usuarios, el almacenamiento de datos de los juegos y los periféricos, la gestión de reseñas y la
+                        subida de videos. Además, los usuarios pueden añadir links a plataformas de videojuegos como
+                        Steam, GOG y Epic Games, para así obtener su lista de juegos de esa plataforma.
+
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <h3>2. Análisis</h3>
+                    <h4>A. Definición del sistema</h4>
+                    <h5>I. Determinación del alcance del sistema</h5>
+                    <p class="text-justify">
+                        Debido a nuestra limitada experiencia y escasez de fondos económicos los
+                        objetivos propuestos en el apartado de análisis son los más completos dentro de nuestras
+                        capacidades dando servicios a los objetivos principales que se quería alcanzar, estos objetivos
+                        serían:
+                    <ul>
+                        <li>
+                            La capacidad de manejar un gran número de peticiones hacia nuestro servidor, debido a que
+                            nuestra aplicación está dirigida a los gamers, los picos más altos de tráfico que hemos
+                            identificado
+                            serían 20:00 a 00:00 o 1:00 entre semana con un tráfico de aproximádamente 2100 y los fines
+                            de semana tenemos un
+                            pico de tráfico alrededor de usuarios de 4269 a altas horas de la noche.
+                        </li>
+                    </ul>
+                    </p>
+                    <h5>II. Identificación de usuarios</h5>
+                    <p class="text-justify">
+                        En este programa contaremos con 2 usuarios, los cuales serían el usuario cliente y moderador .
+                        Cliente : Este usuario será de los que más opciones podrá usar en nuestro programa, mirar
+                        objetivos específicos(apartado cliente).
+                        Moderador: Este usuario la única función que cumple es la de verificar las speedrun enviadas de
+                        los clientes.
+
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <h3>B. Especificación de casos</h3>
+                    <h4>I. Casos de uso gestión</h4>
+                    <p class="text-justify">
+                        <img src="./resources/image/casosUso.png" style="width:75%; height:75%;"/>
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <h3>3. Modelo conceptual de datos</h3>
+                    <p class="text-justify">
+                        <img src="./resources/image/modeloDatos.png" style="width:75%; height:75%;"/>
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <h3>4. Arquitectura de software de la solución</h3>
+                    <p class="text-justify">
+                        <img src="./resources/image/ArquitecturaSoftware.png" style="width:75%; height:75%;"/>
                     </p>
                 </div>
             </div>
