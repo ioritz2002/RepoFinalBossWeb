@@ -7079,12 +7079,12 @@ fieldset:disabled .btn {
 
 .modal {
   position: fixed;
-  top: -100px;
-  left: -130px;
+  top: 0px;
+  left: -225px;
   z-index: 1055;
   display: none;
   width: 100%;
-  height: 125%;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
