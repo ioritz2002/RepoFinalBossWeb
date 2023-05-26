@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/aos.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="./resources/js/jquery-3.6.4.min.js"></script>
+    <script src="resources/js/scrollmagic/minified/ScrollMagic.min.js"></script>
     <title>OFC</title>
     <style>
         /*
@@ -80,8 +83,7 @@
 
         a:link,
         a:visited {
-            text-decoration: none;
-            color: #666;
+            color: #979696;
         }
 
         a:hover[href] {
@@ -121,7 +123,7 @@
         .tasklist,
         .resourcelist {
             clear: both;
-            width: 100%;
+            width: auto;
         }
 
         .gantt-tasklist {
@@ -297,6 +299,9 @@
             padding-left: 10px;
             padding-right: 10px;
         }
+        a .nav-brand>.active{
+            color: #ff980;
+        }
     </style>
 </head>
 
@@ -305,10 +310,13 @@
         <!--imagen princiapl-->
         <div class="row">
             <!--header-->
-            <div class="col-md-12">
+            <div class="col-md-12" id="Inicio">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><span class="text-color-gN">OFC</span>Proyect</a>
+                        <li class="nav-item"  id="main">
+                        <a class="navbar-brand"href="#"><span
+                                class="text-color-gN">OFC</span>Proyect</a>
+                        </li>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -317,40 +325,45 @@
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link " href="#">Inicio</a>
+                                    <a class="nav-link" id="InicioR" href="#">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#nosotros">Nosotros</a>
+                                    <a class="nav-link" id="NosotrosR" href="#Nosotros">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#objetivo">Objetivo</a>
+                                    <a class="nav-link" id="ObjetivoR" href="#Objetivo">Objetivo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#tarea">Tarea</a>
+                                    <a class="nav-link" id="TareaR" href="#Tarea">Tarea</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#recursos">Recursos</a>
+                                    <a class="nav-link" id="RecursosR" href="#Recursos">Recursos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#cronograma">Cronograma</a>
+                                    <a class="nav-link" id="CronogramaR"
+                                        href="#Cronograma">Cronograma</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#presupuesto">Presupuesto</a>
+                                    <a class="nav-link" id="PresupuestoR"
+                                        href="#Presupuesto">Presupuesto</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#seguimiento">Seguimiento</a>
+                                    <a class="nav-link" id="SeguimientoR"
+                                        href="#Seguimiento">Seguimiento</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#evaluacion">Evalución</a>
+                                    <a class="nav-link" id="EvaluacionR"
+                                        href="#Evaluacion">Evalución</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#anexo">Anexo</a>
+                                    <a class="nav-link" id="AnexoR" href="#Anexo">Anexo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#contacto">Contacto</a>
+                                    <a class="nav-link" id="WebgrefiaR"
+                                        href="#Webgrefia">Webgrafía</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#webgrefia">Webgrafía</a>
+                                    <a class="nav-link" id="ContactoR" href="#Contacto">Contacto</a>
                                 </li>
                             </ul>
 
@@ -378,38 +391,50 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <img src="./resources/image/1.png" class="col-md-12 col-sm-12 col-12 h-auto" alt="" srcset="">
+                        <img src="./resources/image/1.png" class="col-md-12 col-sm-12 col-12 h-auto"
+                            alt="" srcset="">
                     </div>
                 </div>
             </div>
             <!--fin imagen princiapl-->
         </div>
         <!--NOSOTROS-->
-        <section class="ts-block ts-xs-text-center pb-0" id="nosotros">
-            <div class="container">
+        <section class="ts-block ts-xs-text-center pb-0 " id="Nosotros">
+            <div class="container" >
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">Sobre</span> nosotros</h2>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
                         <p class="text-justify">
-                            Nos complace presentarles a Otakus Futbol Club, una startup de desarrollo de software que
-                            tiene como objetivo revolucionar la industria de los videojuegos mediante la implementación
-                            de nuevas tecnologías. Con una infraestructura de hardware de primera clase y un proyecto
-                            emocionante en marcha a corto y mediano plazo, Otakus Futbol Club está bien posicionado para
+                            Nos complace presentarles a Otakus Futbol Club, una startup de
+                            desarrollo de software que
+                            tiene como objetivo revolucionar la industria de los videojuegos
+                            mediante la implementación
+                            de nuevas tecnologías. Con una infraestructura de hardware de primera
+                            clase y un proyecto
+                            emocionante en marcha a corto y mediano plazo, Otakus Futbol Club está
+                            bien posicionado para
                             liderar el futuro de los juegos digitales.
                         </p>
                         <p class="text-justify">
-                            La pasión por los videojuegos y la tecnología se unen en esta innovadora startup. El equipo
-                            de Otakus Futbol Club está formado por profesionales altamente capacitados en el desarrollo
-                            de software y la tecnología de la información. Estamos dedicados a aprovechar al máximo la
-                            tecnología para mejorar la experiencia de juego, proporcionar análisis en tiempo real y
+                            La pasión por los videojuegos y la tecnología se unen en esta innovadora
+                            startup. El equipo
+                            de Otakus Futbol Club está formado por profesionales altamente
+                            capacitados en el desarrollo
+                            de software y la tecnología de la información. Estamos dedicados a
+                            aprovechar al máximo la
+                            tecnología para mejorar la experiencia de juego, proporcionar análisis
+                            en tiempo real y
                             ofrecer nuevas formas de interactuar con los videojuegos.
                         </p>
                         <p class="text-justify">
-                            Nuestro proyecto en marcha incluye una plataforma de análisis de datos que ayudará a los
-                            desarrolladores a comprender mejor cómo juegan los usuarios y cómo mejorar la jugabilidad,
-                            así como una aplicación móvil que permitirá a los jugadores conectarse con sus amigos y
+                            Nuestro proyecto en marcha incluye una plataforma de análisis de datos
+                            que ayudará a los
+                            desarrolladores a comprender mejor cómo juegan los usuarios y cómo
+                            mejorar la jugabilidad,
+                            así como una aplicación móvil que permitirá a los jugadores conectarse
+                            con sus amigos y
                             competir en línea.
                         </p>
                     </div>
@@ -418,78 +443,115 @@
         </section>
         <!--FIN NOSOTROS-->
         <!--Objetivos-->
-        <section data-aos="fade-right" class="ts-block ts-xs-text-center pb-0" id="objetivo">
+        <section data-aos="fade-right" class="ts-block ts-xs-text-center pb-0" id="Objetivo">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">O</span>bjetivos</h2>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <h3>Objetivos generales:</h3>
-                        <p class="text-justify">El objetivo de este proyecto es desarrollar una aplicación
+                        <h3><span class="text-color-gN">O</span>bjetivos generales:</h3>
+                        <p class="text-justify">El objetivo de este proyecto es desarrollar una
+                            aplicación
                             multiplataforma para realizar el
-                            seguimiento del progreso de los videojuegos de los usuarios, especificando si el juego está
-                            en estado completado o aún sigue en progreso, cuántas horas ha dedicado en esa partida,
-                            adicionalmente esta aplicación al recoger la información de las horas y el progreso,
-                            calculará una estadística en forma de porcentaje sobre cuánta parte del juego ha completado.
+                            seguimiento del progreso de los videojuegos de los usuarios,
+                            especificando si el juego está
+                            en estado completado o aún sigue en progreso, cuántas horas ha dedicado
+                            en esa partida,
+                            adicionalmente esta aplicación al recoger la información de las horas y
+                            el progreso,
+                            calculará una estadística en forma de porcentaje sobre cuánta parte del
+                            juego ha completado.
 
                         </p>
 
-                        <h3>Objetivos especificos:</h3>
+                        <h3><span class="text-color-gN">O</span>bjetivos especificos:</h3>
                         <p class="text-justify">
                         </p>
 
                         <ul>
                             <li data-aos="fade-up" class="li-style-on">
-                                <p class="text-justify">Un objetivo clave en el proyecto sería la creación de y gestión
-                                    usuarios(usuarios convencionales, críticos y administradores) en el que cada uno
-                                    podrá iniciar sesión, hasta 5000 usuarios simultáneos, podrá recoger la lista de
-                                    juegos que tiene en una determinada plataforma usando la API de la plataforma
+                                <p class="text-justify"><span class="text-color-gN">U</span>n
+                                    objetivo clave en el proyecto sería la
+                                    creación de y gestión
+                                    usuarios(usuarios convencionales, críticos y administradores) en
+                                    el que cada uno
+                                    podrá iniciar sesión, hasta 5000 usuarios simultáneos, podrá
+                                    recoger la lista de
+                                    juegos que tiene en una determinada plataforma usando la API de
+                                    la plataforma
                                     correspondiente, por ejemplo
                                     <a href="https://steamcommunity.com/dev">Steam</a>,
                                     <a href="https://docs.gog.com/">GOG</a>,
-                                    <a href="https://dev.epicgames.com/docs/web-api-ref">Epic Games</a> y
+                                    <a href="https://dev.epicgames.com/docs/web-api-ref">Epic
+                                        Games</a> y
                                     también podrá visualizar los juegos que han
                                     sido añadidos a la lista por el mismo.
                                 </p>
                             </li>
                             <li data-aos="fade-up" class="li-style-on">
-                                <p class="text-justify">La creación de la librería de juegos es una parte importante en
-                                    el proyecto, en el que se podrá añadir un juego a una lista privada, también se
-                                    podrá valorar un juego, esta valoración será diferente si el usuario es un usuario
-                                    convencional o si es un crítico. También podrá añadir otra información como los
-                                    periféricos con los que ha jugado, añadir el tiempo que ha tardado en terminar el
-                                    juego y tipo de partida junto al porcentaje de progreso del mismo, podrá subir un
-                                    video para verificar la partida en caso de que sea un speedrun y habrá un blog para
+                                <p class="text-justify"><span class="text-color-gN">L</span>a
+                                    creación de la librería de juegos es una
+                                    parte importante en
+                                    el proyecto, en el que se podrá añadir un juego a una lista
+                                    privada, también se
+                                    podrá valorar un juego, esta valoración será diferente si el
+                                    usuario es un usuario
+                                    convencional o si es un crítico. También podrá añadir otra
+                                    información como los
+                                    periféricos con los que ha jugado, añadir el tiempo que ha
+                                    tardado en terminar el
+                                    juego y tipo de partida junto al porcentaje de progreso del
+                                    mismo, podrá subir un
+                                    video para verificar la partida en caso de que sea un speedrun y
+                                    habrá un blog para
                                     comentar guías o problemas que ha habido.</p>
                             </li>
                             <li data-aos="fade-up" class="li-style-on">
-                                <p class="text-justify">Otro de los objetivos es crear una tabla de estadísticas que
-                                    tendrá que mostrar el juego más jugado y la media de tiempo que se tarda en pasarse
-                                    los juegos y cuánto se tarda en completarlo 100%, estadísticas sobre la plataforma
+                                <p class="text-justify"><span class="text-color-gN">O</span>tro de
+                                    los objetivos es crear una tabla de
+                                    estadísticas que
+                                    tendrá que mostrar el juego más jugado y la media de tiempo que
+                                    se tarda en pasarse
+                                    los juegos y cuánto se tarda en completarlo 100%, estadísticas
+                                    sobre la plataforma
                                     en la que juegan los jugadores.
                                 </p>
                             </li>
 
                             <li data-aos="fade-up" class="li-style-on">
                                 <p class="text-justify">
-                                    Esta información se almacenará en una base de datos y habrá una aplicación servidor
-                                    que se encarga de la gestión de la información. Parte de la información que se
-                                    almacena (progreso, periféricos y la plataforma en la que se juega) se venderán a
+                                    <span class="text-color-gN">E</span>sta información se
+                                    almacenará en una base de datos y habrá una
+                                    aplicación servidor
+                                    que se encarga de la gestión de la información. Parte de la
+                                    información que se
+                                    almacena (progreso, periféricos y la plataforma en la que se
+                                    juega) se venderán a
                                     empresas que estén interesadas en esta información.
                                 </p>
                             </li>
                             <li data-aos="fade-up" class="li-style-on">
                                 <p class="text-justify">
-                                    El servidor estará en un servidor hosteado por nosotros ya que puede ser más
-                                    rentable a largo plazo que alquilar un servidor de un proveedor de servicios en la
-                                    nube como AWS (Amazon Web Services). Las razones de comprar nuestro hardware, es que
-                                    tenemos un mayor control sobre él, lo que nos permite personalizarlo para adaptarlo
-                                    a nuestras necesidades específicas, implementar medidas de seguridad y cumplimiento
-                                    y reducir el tiempo de inactividad. Además, en algunos casos, un servidor físico
-                                    puede proporcionar un mejor rendimiento que un servidor virtual alquilado. Aunque
-                                    hay beneficios en alquilar un servidor de un proveedor en la nube, si buscamos una
-                                    solución más rentable y personalizable, comprar nuestro hardware puede ser la mejor
+                                    <span class="text-color-gN">E</span>l servidor estará en un
+                                    servidor hosteado por nosotros ya que
+                                    puede ser más
+                                    rentable a largo plazo que alquilar un servidor de un proveedor
+                                    de servicios en la
+                                    nube como AWS (Amazon Web Services). Las razones de comprar
+                                    nuestro hardware, es que
+                                    tenemos un mayor control sobre él, lo que nos permite
+                                    personalizarlo para adaptarlo
+                                    a nuestras necesidades específicas, implementar medidas de
+                                    seguridad y cumplimiento
+                                    y reducir el tiempo de inactividad. Además, en algunos casos, un
+                                    servidor físico
+                                    puede proporcionar un mejor rendimiento que un servidor virtual
+                                    alquilado. Aunque
+                                    hay beneficios en alquilar un servidor de un proveedor en la
+                                    nube, si buscamos una
+                                    solución más rentable y personalizable, comprar nuestro hardware
+                                    puede ser la mejor
                                     opción para nuestra aplicación.
                                 </p>
                             </li>
@@ -500,8 +562,8 @@
         </section>
         <!--FIN Objetivos-->
         <!--Tarea-->
-        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="tarea">
-            <div class="container">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="Tarea">
+            <div class="container" >
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">T</span>areas</h2>
                 </div>
@@ -567,8 +629,8 @@
                                             <span>1.1</span>
                                         </td>
                                         <td>
-                                            <a name="task2" style="margin-left: 18px" id="task2" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task2" style="margin-left: 18px" id="task2"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Reunion de equipo para el diseño del proyecto">
                                                 <span>Diseño de proyecto</span>
                                             </a>
@@ -596,8 +658,8 @@
                                             <span>1.2</span>
                                         </td>
                                         <td>
-                                            <a name="task3" style="margin-left: 18px" id="task3" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task3" style="margin-left: 18px" id="task3"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Reunion de equipo para el diseño del de software">
                                                 <span>Diseño arquitectura de software</span>
                                             </a>
@@ -625,8 +687,8 @@
                                             <span>1.3</span>
                                         </td>
                                         <td>
-                                            <a name="task4" style="margin-left: 18px" id="task4" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task4" style="margin-left: 18px" id="task4"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Reunion de equipo para el diseño del modelo de datos">
                                                 <span>Diseño de modelo de datos</span>
                                             </a>
@@ -649,7 +711,8 @@
                                         </td>
                                         <td>ps[80], as[80]</td>
                                     </tr>
-                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="odd"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>1.4</span>
                                         </td>
@@ -678,8 +741,8 @@
                                             <span>1.4.1</span>
                                         </td>
                                         <td>
-                                            <a name="task6" style="margin-left: 36px" id="task6" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task6" style="margin-left: 36px" id="task6"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Reunion de equipo para el diseño de los casos de uso">
                                                 <span>Diseño casos de uso</span>
                                             </a>
@@ -707,8 +770,8 @@
                                             <span>1.4.2</span>
                                         </td>
                                         <td>
-                                            <a name="task7" style="margin-left: 36px" id="task7" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task7" style="margin-left: 36px" id="task7"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Reunion de equipo para el diseño de diagrama de clases">
                                                 <span>Diseño de diagrama de clases</span>
                                             </a>
@@ -736,8 +799,8 @@
                                             <span>1.4.3</span>
                                         </td>
                                         <td>
-                                            <a name="task8" style="margin-left: 36px" id="task8" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task8" style="margin-left: 36px" id="task8"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Reunion de equipo para el diseño de la interfaz de usuario">
                                                 <span>Diseño de interfaz de usuario</span>
                                             </a>
@@ -760,7 +823,8 @@
                                         </td>
                                         <td>ps, dui, as</td>
                                     </tr>
-                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="odd"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>1.5</span>
                                         </td>
@@ -789,8 +853,8 @@
                                             <span>1.5.1</span>
                                         </td>
                                         <td>
-                                            <a name="task10" style="margin-left: 36px" id="task10" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task10" style="margin-left: 36px" id="task10"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Reunion de equipo para el diseño de diagrama de clases">
                                                 <span>Diseño de diagrama de clases</span>
                                             </a>
@@ -813,7 +877,8 @@
                                         </td>
                                         <td>ps[40], as[40]</td>
                                     </tr>
-                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="odd"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>2</span>
                                         </td>
@@ -837,7 +902,8 @@
                                         </td>
                                         <td></td>
                                     </tr>
-                                    <tr class="even" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="even"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>2.1</span>
                                         </td>
@@ -866,8 +932,8 @@
                                             <span>2.1.1</span>
                                         </td>
                                         <td>
-                                            <a name="task13" style="margin-left: 36px" id="task13" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task13" style="margin-left: 36px" id="task13"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Desarrollo a partir del diseño de la interfaz de usuario">
                                                 <span>Desarrollo de la interfaz de usuario</span>
                                             </a>
@@ -895,10 +961,11 @@
                                             <span>2.1.2</span>
                                         </td>
                                         <td>
-                                            <a name="task14" style="margin-left: 36px" id="task14" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task14" style="margin-left: 36px" id="task14"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Desarrollo a partir del diseño de la arquitectura de software y diagrama de clases">
-                                                <span>Desarrollo de comunicacion cliente/servidor</span>
+                                                <span>Desarrollo de comunicacion
+                                                    cliente/servidor</span>
                                             </a>
                                         </td>
                                         <td>
@@ -919,7 +986,8 @@
                                         </td>
                                         <td>pj[50], ps[55]</td>
                                     </tr>
-                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="odd"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>2.2</span>
                                         </td>
@@ -948,10 +1016,11 @@
                                             <span>2.2.1</span>
                                         </td>
                                         <td>
-                                            <a name="task16" style="margin-left: 36px" id="task16" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task16" style="margin-left: 36px" id="task16"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Desarrollo a partir del diseño de la arquitectura de software y diagrama de clases">
-                                                <span>Desarrollo de comunicacion cliente/servidor</span>
+                                                <span>Desarrollo de comunicacion
+                                                    cliente/servidor</span>
                                             </a>
                                         </td>
                                         <td>
@@ -977,8 +1046,8 @@
                                             <span>2.2.2</span>
                                         </td>
                                         <td>
-                                            <a name="task17" style="margin-left: 36px" id="task17" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task17" style="margin-left: 36px" id="task17"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Desarrollo de la parte de servidor que persistirá los datos enviados por el cliente">
                                                 <span>Implementacion de persistencia</span>
                                             </a>
@@ -1001,7 +1070,8 @@
                                         </td>
                                         <td>pj[50], pj[10]</td>
                                     </tr>
-                                    <tr class="even" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="even"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>3</span>
                                         </td>
@@ -1025,13 +1095,14 @@
                                         </td>
                                         <td></td>
                                     </tr>
-                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="odd"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>3.1</span>
                                         </td>
                                         <td>
-                                            <a name="task19" style="margin-left: 18px" id="task19" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task19" style="margin-left: 18px" id="task19"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Testeos para validar el correcto funcionamiento del lado cliente">
                                                 <span>CLIENTE</span>
                                             </a>
@@ -1056,8 +1127,8 @@
                                             <span>3.1.1</span>
                                         </td>
                                         <td>
-                                            <a name="task20" style="margin-left: 36px" id="task20" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task20" style="margin-left: 36px" id="task20"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Desarrollo de los test unitarios para verificar el funcionamiento del cliente">
                                                 <span>Desarrollo de test unitario</span>
                                             </a>
@@ -1080,13 +1151,14 @@
                                         </td>
                                         <td>dux[70]</td>
                                     </tr>
-                                    <tr class="odd" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="odd"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>3.2</span>
                                         </td>
                                         <td>
-                                            <a name="task21" style="margin-left: 18px" id="task21" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task21" style="margin-left: 18px" id="task21"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Testeos para validar el correcto funcionamiento del servidor">
                                                 <span>SERVER</span>
                                             </a>
@@ -1111,8 +1183,8 @@
                                             <span>3.2.1</span>
                                         </td>
                                         <td>
-                                            <a name="task22" style="margin-left: 36px" id="task22" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task22" style="margin-left: 36px" id="task22"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Desarrollo de los test unitarios para verificar el funcionamiento del servidor">
                                                 <span>Desarrollo de test unitario</span>
                                             </a>
@@ -1140,8 +1212,8 @@
                                             <span>3.3</span>
                                         </td>
                                         <td>
-                                            <a name="task23" style="margin-left: 18px" id="task23" data-toggle="tooltip"
-                                                data-placement="bottom"
+                                            <a name="task23" style="margin-left: 18px" id="task23"
+                                                data-toggle="tooltip" data-placement="bottom"
                                                 title="Desarrollo del test integrado para comprobar el funcionamiento del cliente y servidor">
                                                 <span>Desarrollo de test integrados</span>
                                             </a>
@@ -1164,7 +1236,8 @@
                                         </td>
                                         <td>pj, dux</td>
                                     </tr>
-                                    <tr class="even" style="&#10;            font-weight: bold;&#10;          ">
+                                    <tr class="even"
+                                        style="&#10;            font-weight: bold;&#10;          ">
                                         <td>
                                             <span>4</span>
                                         </td>
@@ -1193,8 +1266,9 @@
                                             <span>4.1</span>
                                         </td>
                                         <td>
-                                            <a name="task25" style="margin-left: 18px" id="task25" data-toggle="tooltip"
-                                                data-placement="bottom" title="Implementar el proyecto en un servidor">
+                                            <a name="task25" style="margin-left: 18px" id="task25"
+                                                data-toggle="tooltip" data-placement="bottom"
+                                                title="Implementar el proyecto en un servidor">
                                                 <span>Implantacion del proyecto</span>
                                             </a>
                                         </td>
@@ -1225,13 +1299,13 @@
         </section>
         <!--FIN Tarea-->
         <!--Recuro-->
-        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="recursos">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="Recursos">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">Recursos</span> Humanos</h2>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 col-md-12 col-xl-12">
+                    <div class="offset-3 col-sm-5 col-md-6 col-xl-7">
                         <div class="resourcelist">
                             <div class="resourcelist-table">
                                 <table cellspacing="0" cellpadding="0" border="1" width="100%"
@@ -1377,7 +1451,7 @@
         </section>
         <!--FIN Recuro-->
         <!--Cronograma-->
-        <section data-aos="fade-right" class="ts-block ts-xs-text-center pb-0" id="cronograma">
+        <section data-aos="fade-right" class="ts-block ts-xs-text-center pb-0" id="Cronograma">
             <div class="container-fluid">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">C</span>ronograma</h2>
@@ -1415,7 +1489,9 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">24d 7h </span>
+                                            <span
+                                                style="white-space: nowrap; font-weight: bold;">24d
+                                                7h </span>
                                         </td>
                                     </tr>
                                     <tr class="even">
@@ -1423,7 +1499,8 @@
                                             <span>1.1</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-2" style="white-space: nowrap; margin-left: 18px;"
+                                            <a name="gantt-2"
+                                                style="white-space: nowrap; margin-left: 18px;"
                                                 id="gantt-2">
                                                 <span>Diseño de proyecto</span>
                                             </a>
@@ -1437,7 +1514,8 @@
                                             <span>1.2</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-3" style="white-space: nowrap; margin-left: 18px;"
+                                            <a name="gantt-3"
+                                                style="white-space: nowrap; margin-left: 18px;"
                                                 id="gantt-3">
                                                 <span>Diseño arquitectura de software</span>
                                             </a>
@@ -1451,7 +1529,8 @@
                                             <span>1.3</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-4" style="white-space: nowrap; margin-left: 18px;"
+                                            <a name="gantt-4"
+                                                style="white-space: nowrap; margin-left: 18px;"
                                                 id="gantt-4">
                                                 <span>Diseño de modelo de datos</span>
                                             </a>
@@ -1472,7 +1551,8 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">6d 7h </span>
+                                            <span style="white-space: nowrap; font-weight: bold;">6d
+                                                7h </span>
                                         </td>
                                     </tr>
                                     <tr class="even">
@@ -1480,7 +1560,8 @@
                                             <span>1.4.1</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-6" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-6"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-6">
                                                 <span>Diseño casos de uso</span>
                                             </a>
@@ -1494,7 +1575,8 @@
                                             <span>1.4.2</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-7" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-7"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-7">
                                                 <span>Diseño de diagrama de clases</span>
                                             </a>
@@ -1508,7 +1590,8 @@
                                             <span>1.4.3</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-8" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-8"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-8">
                                                 <span>Diseño de ventanas</span>
                                             </a>
@@ -1529,7 +1612,8 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">4d </span>
+                                            <span style="white-space: nowrap; font-weight: bold;">4d
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr class="even">
@@ -1537,7 +1621,8 @@
                                             <span>1.5.1</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-10" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-10"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-10">
                                                 <span>Diseño de diagrama de clases</span>
                                             </a>
@@ -1558,7 +1643,9 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">30d </span>
+                                            <span
+                                                style="white-space: nowrap; font-weight: bold;">30d
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr class="even">
@@ -1573,7 +1660,9 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">18d </span>
+                                            <span
+                                                style="white-space: nowrap; font-weight: bold;">18d
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr class="odd">
@@ -1581,7 +1670,8 @@
                                             <span>2.1.1</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-13" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-13"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-13">
                                                 <span>Desarrollo de ventanas</span>
                                             </a>
@@ -1595,9 +1685,11 @@
                                             <span>2.1.2</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-14" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-14"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-14">
-                                                <span>Desarrollo de comunicacion cliente/servidor</span>
+                                                <span>Desarrollo de comunicacion
+                                                    cliente/servidor</span>
                                             </a>
                                         </td>
                                         <td>
@@ -1616,7 +1708,9 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">12d </span>
+                                            <span
+                                                style="white-space: nowrap; font-weight: bold;">12d
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr class="even">
@@ -1624,9 +1718,11 @@
                                             <span>2.2.1</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-16" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-16"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-16">
-                                                <span>Desarrollo de comunicacion cliente/servidor</span>
+                                                <span>Desarrollo de comunicacion
+                                                    cliente/servidor</span>
                                             </a>
                                         </td>
                                         <td>
@@ -1638,7 +1734,8 @@
                                             <span>2.2.2</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-17" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-17"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-17">
                                                 <span>Implementacion de persistencia</span>
                                             </a>
@@ -1659,7 +1756,9 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">40d </span>
+                                            <span
+                                                style="white-space: nowrap; font-weight: bold;">40d
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr class="odd">
@@ -1674,7 +1773,9 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">18d </span>
+                                            <span
+                                                style="white-space: nowrap; font-weight: bold;">18d
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr class="even">
@@ -1682,7 +1783,8 @@
                                             <span>3.1.1</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-20" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-20"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-20">
                                                 <span>Desarrollo de test unitario</span>
                                             </a>
@@ -1703,7 +1805,9 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">12d </span>
+                                            <span
+                                                style="white-space: nowrap; font-weight: bold;">12d
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr class="even">
@@ -1711,7 +1815,8 @@
                                             <span>3.2.1</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-22" style="white-space: nowrap; margin-left: 36px;"
+                                            <a name="gantt-22"
+                                                style="white-space: nowrap; margin-left: 36px;"
                                                 id="gantt-22">
                                                 <span>Desarrollo de test unitario</span>
                                             </a>
@@ -1725,7 +1830,8 @@
                                             <span>3.3</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-23" style="white-space: nowrap; margin-left: 18px;"
+                                            <a name="gantt-23"
+                                                style="white-space: nowrap; margin-left: 18px;"
                                                 id="gantt-23">
                                                 <span>Desarrollo de test integrados</span>
                                             </a>
@@ -1746,7 +1852,8 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <span style="white-space: nowrap; font-weight: bold;">2d </span>
+                                            <span style="white-space: nowrap; font-weight: bold;">2d
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr class="odd">
@@ -1754,7 +1861,8 @@
                                             <span>4.1</span>
                                         </td>
                                         <td>
-                                            <a name="gantt-25" style="white-space: nowrap; margin-left: 18px;"
+                                            <a name="gantt-25"
+                                                style="white-space: nowrap; margin-left: 18px;"
                                                 id="gantt-25">
                                                 <span>Implantacion del proyecto</span>
                                             </a>
@@ -1766,17 +1874,27 @@
                                 </table>
                             </div>
                             <div class="gantt-chart">
-                                <table cellspacing="0" cellpadding="0" border="1" style="table-layout: fixed;">
+                                <table cellspacing="0" cellpadding="0" border="1"
+                                    style="table-layout: fixed;">
                                     <tr class="header" align="left">
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 9, 2023</th>
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 10, 2023</th>
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 11, 2023</th>
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 12, 2023</th>
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 13, 2023</th>
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 14, 2023</th>
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 15, 2023</th>
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 16, 2023</th>
-                                        <th class="gantt-week-header" align="center" colspan="7">Week 17, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 9, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 10, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 11, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 12, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 13, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 14, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 15, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 16, 2023</th>
+                                        <th class="gantt-week-header" align="center" colspan="7">
+                                            Week 17, 2023</th>
                                         <th class="gantt-3day-header" colspan="3"></th>
                                         <th></th>
                                     </tr>
@@ -1857,8 +1975,10 @@
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 6px;"></div>
-                                                <div class="gantt-complete-notdone critico" style="width: 26px;"></div>
+                                                <div class="gantt-empty-begin" style="width: 6px;">
+                                                </div>
+                                                <div class="gantt-complete-notdone critico"
+                                                    style="width: 26px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">ps, dui, as, m</div>
                                             </div>
@@ -1867,8 +1987,10 @@
                                     <tr class="odd">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 32px;"></div>
-                                                <div class="gantt-complete-notdone critico" style="width: 15px;"></div>
+                                                <div class="gantt-empty-begin" style="width: 32px;">
+                                                </div>
+                                                <div class="gantt-complete-notdone critico"
+                                                    style="width: 15px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">ps, dui, as</div>
                                             </div>
@@ -1877,8 +1999,10 @@
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 47px;"></div>
-                                                <div class="gantt-complete-notdone critico" style="width: 106px;"></div>
+                                                <div class="gantt-empty-begin" style="width: 47px;">
+                                                </div>
+                                                <div class="gantt-complete-notdone critico"
+                                                    style="width: 106px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">ps[80], as[80]</div>
                                             </div>
@@ -1892,8 +2016,10 @@
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 47px;"></div>
-                                                <div class="gantt-complete-notdone" style="width: 140px;"></div>
+                                                <div class="gantt-empty-begin" style="width: 47px;">
+                                                </div>
+                                                <div class="gantt-complete-notdone"
+                                                    style="width: 140px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">ps[20], as[20]</div>
                                             </div>
@@ -1902,8 +2028,10 @@
                                     <tr class="odd">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 153px;"></div>
-                                                <div class="gantt-complete-notdone critico" style="width: 140px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 153px;"></div>
+                                                <div class="gantt-complete-notdone critico"
+                                                    style="width: 140px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">ps[40], as[40]</div>
                                             </div>
@@ -1912,8 +2040,10 @@
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 293px;"></div>
-                                                <div class="gantt-complete-notdone critico" style="width: 14px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 293px;"></div>
+                                                <div class="gantt-complete-notdone critico"
+                                                    style="width: 14px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">ps, dui, as</div>
                                             </div>
@@ -1927,8 +2057,10 @@
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 153px;"></div>
-                                                <div class="gantt-complete-notdone" style="width: 140px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 153px;"></div>
+                                                <div class="gantt-complete-notdone"
+                                                    style="width: 140px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">ps[40], as[40]</div>
                                             </div>
@@ -1947,18 +2079,23 @@
                                     <tr class="odd">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 307px;"></div>
-                                                <div class="gantt-complete-notdone" style="width: 122px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 307px;"></div>
+                                                <div class="gantt-complete-notdone"
+                                                    style="width: 122px;"></div>
                                                 <div class="gantt-empty-end"></div>
-                                                <div class="gantt-resources">pj[50], pj[50], pj[90]</div>
+                                                <div class="gantt-resources">pj[50], pj[50], pj[90]
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 307px;"></div>
-                                                <div class="gantt-complete-notdone" style="width: 264px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 307px;"></div>
+                                                <div class="gantt-complete-notdone"
+                                                    style="width: 264px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">pj[50], ps[55]</div>
                                             </div>
@@ -1972,8 +2109,10 @@
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 307px;"></div>
-                                                <div class="gantt-complete-notdone" style="width: 264px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 307px;"></div>
+                                                <div class="gantt-complete-notdone"
+                                                    style="width: 264px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">pj[50], ps[45]</div>
                                             </div>
@@ -1982,8 +2121,10 @@
                                     <tr class="odd">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 307px;"></div>
-                                                <div class="gantt-complete-notdone" style="width: 140px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 307px;"></div>
+                                                <div class="gantt-complete-notdone"
+                                                    style="width: 140px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">pj[50], pj[10]</div>
                                             </div>
@@ -2002,8 +2143,10 @@
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 307px;"></div>
-                                                <div class="gantt-complete-notdone critico" style="width: 706px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 307px;"></div>
+                                                <div class="gantt-complete-notdone critico"
+                                                    style="width: 706px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">dux[70]</div>
                                             </div>
@@ -2017,8 +2160,10 @@
                                     <tr class="even">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 307px;"></div>
-                                                <div class="gantt-complete-notdone" style="width: 420px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 307px;"></div>
+                                                <div class="gantt-complete-notdone"
+                                                    style="width: 420px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">pj[50], dux[30]</div>
                                             </div>
@@ -2027,8 +2172,10 @@
                                     <tr class="odd">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 1013px;"></div>
-                                                <div class="gantt-complete-notdone critico" style="width: 140px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 1013px;"></div>
+                                                <div class="gantt-complete-notdone critico"
+                                                    style="width: 140px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">pj, dux</div>
                                             </div>
@@ -2042,8 +2189,10 @@
                                     <tr class="odd">
                                         <td colspan="67">
                                             <div style="width: 1321px; white-space: nowrap;">
-                                                <div class="gantt-empty-begin" style="width: 1153px;"></div>
-                                                <div class="gantt-complete-notdone critico" style="width: 17px;"></div>
+                                                <div class="gantt-empty-begin"
+                                                    style="width: 1153px;"></div>
+                                                <div class="gantt-complete-notdone critico"
+                                                    style="width: 17px;"></div>
                                                 <div class="gantt-empty-end"></div>
                                                 <div class="gantt-resources">pj, pj, ps</div>
                                             </div>
@@ -2058,7 +2207,7 @@
         </section>
         <!--FIN Cronograma-->
         <!--Presupuesto-->
-        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="presupuesto">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="Presupuesto">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">P</span>resupuesto</h2>
@@ -2141,16 +2290,18 @@
                 </div>
 
                 <div class="text-justify">
-                    <h3 class="text-center">Presupuesto de recursos humanos</h3>
+                    <h3 class="text-center mt-4 mb-4"><span class="text-color-gN">P</span>resupuesto
+                        de recursos humanos</h3>
                 </div>
-                <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+                <div class="col-12 col-sm-12 col-md-12 col-xl-12 mt-4 mb-4  ">
                     <p>
-                        Los fundadores (personal de OFC) y co-fundadores (personal de Sussy Baka) gestionaron
+                        Los fundadores (personal de OFC) y co-fundadores (personal de Sussy Baka)
+                        gestionaron
                         que los programadores juniors tuviesen un
                         presupuesto bajo ya que estos mismo són los que ejercen de juniors.
                     </p>
                 </div>
-                <div class="offset-4 col-12 col-sm-12 col-md-12 col-xl-12">
+                <div class="offset-4 col-sm-5 col-md-6 col-xl-7">
                     <table class="table-responsive table table-dark">
                         <thead>
                             <th scope="col">Nombre</th>
@@ -2194,9 +2345,10 @@
                         </tfoot>
                     </table>
                 </div>
-                <div class="offset-4 col-12 col-sm-12 col-md-12 col-xl-12">
+                <div class="offset-4 col-8 col-sm-8 col-md-8 col-xl-8">
                     <div class="table-responsive ">
-                        <caption>Presupuesto total</caption>
+                        <h3 class="mt-4 mb-4 offset-1 col-sm-8 col-md-4 col-xl-4"><span
+                                class="text-color-gN">P</span>resupuesto total</h3>
                         <table class="table table-dark">
                             <tbody>
                                 <tr>
@@ -2225,7 +2377,7 @@
         </section>
         <!--FIN Presupuesto-->
         <!--Seguimiento-->
-        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="seguimiento">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="Seguimiento">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">S</span>eguimiento</h2>
@@ -2233,13 +2385,20 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
                         <p class="text-justify">
-                            En todo proyecto , como bien es sabido es necesario tener un correcto seguimiento de las
-                            tareas para saber cual es el grado de avance, usaremos Odoo para realizar el seguimiento de
-                            las tareas a realizar, en el que se incurrirá diariamente las horas dedicadas a cada tarea,
-                            evidentemente el cliente tendrá acceso a el odoo para poder observar el avance del proyecto,
-                            incluso podrán generar informes del proyecto en todo momento. Además se realizarán reuniones
-                            periódicas con el cliente para que sepa el grado de avance que tenemos en el proyecto. Por
-                            otra parte las tarea finalizadas tendrán un apartado entregable para poder comenzar la fase
+                            En todo proyecto , como bien es sabido es necesario tener un correcto
+                            seguimiento de las
+                            tareas para saber cual es el grado de avance, usaremos Odoo para
+                            realizar el seguimiento de
+                            las tareas a realizar, en el que se incurrirá diariamente las horas
+                            dedicadas a cada tarea,
+                            evidentemente el cliente tendrá acceso a el odoo para poder observar el
+                            avance del proyecto,
+                            incluso podrán generar informes del proyecto en todo momento. Además se
+                            realizarán reuniones
+                            periódicas con el cliente para que sepa el grado de avance que tenemos
+                            en el proyecto. Por
+                            otra parte las tarea finalizadas tendrán un apartado entregable para
+                            poder comenzar la fase
                             de pruebas de esa tarea.
                         </p>
                     </div>
@@ -2250,7 +2409,7 @@
         </section>
         <!--FIN Seguimiento-->
         <!--Evaluacion-->
-        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="evaluacion">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="Evaluacion">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">E</span>valuación</h2>
@@ -2258,126 +2417,190 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
                         <p class="text-justify">
-                            La evaluación es necesaria para garantizar que la aplicación que desarrollamos es funcional
-                            y hace todo lo que se supone que tiene que hacer. Se harán diversas pruebas de todo tipo
-                            para probar que se cumpla dicha funcionalidad, además de probar que la aplicación realice de
-                            forma correcta todas las operaciones y acciones. También se analizará que no haya
-                            desviaciones del plan inicial para que en caso de que por alguna razón haya alguna
-                            desviación se realice un análisis para ver el porqué y se corrija, estos serán los test que
+                            La evaluación es necesaria para garantizar que la aplicación que
+                            desarrollamos es funcional
+                            y hace todo lo que se supone que tiene que hacer. Se harán diversas
+                            pruebas de todo tipo
+                            para probar que se cumpla dicha funcionalidad, además de probar que la
+                            aplicación realice de
+                            forma correcta todas las operaciones y acciones. También se analizará
+                            que no haya
+                            desviaciones del plan inicial para que en caso de que por alguna razón
+                            haya alguna
+                            desviación se realice un análisis para ver el porqué y se corrija, estos
+                            serán los test que
                             se harán:
-                        <ul>
-                            <li class="li-style-on aos-init aos-animate">Test unitarios por cada tarea terminada: Una
-                                vez los programadores terminen
-                                cada tarea las enviaran a los testers que realizarán sus pruebas en las que si observan
-                                algún fallo, volverán a enviárselas a los programadores con una retroalimentación para
-                                solucionar el fallo en el código.</li>
-                            <li class="li-style-on aos-init aos-animate">Test integrado al acabar el proyecto: Al acabar
-                                las tareas y realizar los tests
-                                unitarios se realizará un test integrado del proyecto, en caso de fallo se volverá a la
-                                fase anterior
-                            </li>
-                            <li class="li-style-on aos-init aos-animate">Pruebas de usuario: Una vez acabado el
-                                desarrollo y las pruebas de código algún
-                                trabajador realizará una prueba de usuario para resaltar defectos de ámbito visual o
-                                complejidad en el proyecto.
-                            </li>
-                            <li class="li-style-on aos-init aos-animate">Pruebas de usuario por parte del cliente: Al
-                                final, el cliente final realizará
-                                una prueba para comprobar si el proyecto cumple con las expectativas propuestas, y en
-                                caso de no ser así se volverá a la fase de análisis o de desarrollo dependiendo de las
-                                necesidades del cliente.
-                            </li>
-                        </ul>
-
+                            <ul>
+                                <li class="li-style-on aos-init aos-animate mb-2">
+                                    <p class="fw-bold"><span class="text-color-gN">T</span>est
+                                        unitarios por cada tarea terminada:</p> Una
+                                    vez los programadores terminen
+                                    cada tarea las enviaran a los testers que realizarán sus pruebas
+                                    en las que si observan
+                                    algún fallo, volverán a enviárselas a los programadores con una
+                                    retroalimentación para
+                                    solucionar el fallo en el código.
+                                </li>
+                                <li class="li-style-on aos-init aos-animate mb-2">
+                                    <p class="fw-bold"><span class="text-color-gN">T</span>est
+                                        integrado al acabar el proyecto:</p> Al acabar
+                                    las tareas y realizar los tests
+                                    unitarios se realizará un test integrado del proyecto, en caso
+                                    de fallo se volverá a la
+                                    fase anterior
+                                </li>
+                                <li class="li-style-on aos-init aos-animate mb-2">
+                                    <p class="fw-bold"><span class="text-color-gN">P</span>ruebas de
+                                        usuario:</p> Una vez acabado el
+                                    desarrollo y las pruebas de código algún
+                                    trabajador realizará una prueba de usuario para resaltar
+                                    defectos de ámbito visual o
+                                    complejidad en el proyecto.
+                                </li>
+                                <li class="li-style-on aos-init aos-animate mb-2">
+                                    <p class="fw-bold"><span class="text-color-gN">P</span>ruebas de
+                                        usuario por parte del cliente:</p> Al
+                                    final, el cliente final realizará
+                                    una prueba para comprobar si el proyecto cumple con las
+                                    expectativas propuestas, y en
+                                    caso de no ser así se volverá a la fase de análisis o de
+                                    desarrollo dependiendo de las
+                                    necesidades del cliente.
+                                </li>
+                            </ul>
                         </p>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-xl-12 text-center">
-                        <img src="./resources/image/evaluacion.png" style="width:75%; height:75%;" />
+                    <div class="col-sm-12 col-md-12 col-xl-12 pt-5 m-0 pb-5 text-center">
+                        <img src="./resources/image/evaluacion.png" style="width:75%; height:75%;"
+                            class="img-fluid" />
                     </div>
                 </div>
             </div>
         </section>
         <!--FIN Seguimiento-->
         <!--Anexo-->
-        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="anexo">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="Anexo">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">A</span>nexo - Documentación técnica</h2>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <h3>1. Introducción</h3>
+                        <li class="li-style-on aos-init aos-animate mb-2 h3"><span
+                                class="text-color-gN">I</span>ntroducción</li>
                         <p class="text-justify">
-                            Esta es la documentación técnica del programa web desarrollado por OFC, diseñado para
+                            Esta es la documentación técnica del programa web desarrollado por OFC,
+                            diseñado para
                             guardar el
-                            progreso de los juegos, agregar reseñas, subir videos de speedruns, y registrar qué
+                            progreso de los juegos, agregar reseñas, subir videos de speedruns, y
+                            registrar qué
                             periféricos
                             se utilizaron para completarlos.
-                            La plataforma está construida con una arquitectura de microservicios que permite la
-                            escalabilidad y el manejo de grandes cantidades de datos de usuarios y juegos.
-                            La plataforma se compone de diferentes módulos que trabajan juntos para proporcionar una
-                            experiencia de usuario fluida y segura. Los módulos principales incluyen la autenticación de
-                            usuarios, el almacenamiento de datos de los juegos y los periféricos, la gestión de reseñas
+                            La plataforma está construida con una arquitectura de microservicios que
+                            permite la
+                            escalabilidad y el manejo de grandes cantidades de datos de usuarios y
+                            juegos.
+                            La plataforma se compone de diferentes módulos que trabajan juntos para
+                            proporcionar una
+                            experiencia de usuario fluida y segura. Los módulos principales incluyen
+                            la autenticación de
+                            usuarios, el almacenamiento de datos de los juegos y los periféricos, la
+                            gestión de reseñas
                             y la
-                            subida de videos. Además, los usuarios pueden añadir links a plataformas de videojuegos como
-                            Steam, GOG y Epic Games, para así obtener su lista de juegos de esa plataforma.
+                            subida de videos. Además, los usuarios pueden añadir links a plataformas
+                            de videojuegos como
+                            Steam, GOG y Epic Games, para así obtener su lista de juegos de esa
+                            plataforma.
                         </p>
                     </div>
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <h3>2. Análisis</h3>
-                        <h4>A. Definición del sistema</h4>
-                        <h5>I. Determinación del alcance del sistema</h5>
-                        <p class="text-justify">
-                            Debido a nuestra limitada experiencia y escasez de fondos económicos los
-                            objetivos propuestos en el apartado de análisis son los más completos dentro de nuestras
-                            capacidades dando servicios a los objetivos principales que se quería alcanzar, estos
-                            objetivos
-                            serían:
-                        <ul>
-                            <li>
-                                La capacidad de manejar un gran número de peticiones hacia nuestro servidor, debido a
-                                que
-                                nuestra aplicación está dirigida a los gamers, los picos más altos de tráfico que hemos
-                                identificado
-                                serían 20:00 a 00:00 o 1:00 entre semana con un tráfico de aproximádamente 2100 y los
-                                fines
-                                de semana tenemos un
-                                pico de tráfico alrededor de usuarios de 4269 a altas horas de la noche.
-                            </li>
-                        </ul>
-                        </p>
-                        <h5>II. Identificación de usuarios</h5>
-                        <p class="text-justify">
-                            En este programa contaremos con 2 usuarios, los cuales serían el usuario cliente y moderador
-                            .
-                            Cliente : Este usuario será de los que más opciones podrá usar en nuestro programa, mirar
-                            objetivos específicos(apartado cliente).
-                            Moderador: Este usuario la única función que cumple es la de verificar las speedrun enviadas
-                            de
-                            los clientes.
-                        </p>
+                        <ol>
+                            <li class="li-style-on aos-init aos-animate mb-2 h3"><span
+                                    class="text-color-gN">A</span>nálisis</li>
+                            <ol>
+                                <li class="li-style-on aos-init aos-animate mb-2 h4" type="A">
+                                    <span class="text-color-gN">D</span>efinición del
+                                    sistema</li>
+                                <ol>
+                                    <li class="li-style-on aos-init aos-animate mb-2 h4">
+                                        <span class="text-color-gN">D</span>ón
+                                        del alcance del sistema</li>
+                                    <p class="text-justify">
+                                        Debido a nuestra limitada experiencia y escasez de fondos
+                                        económicos los
+                                        objetivos propuestos en el apartado de análisis son los más
+                                        completos dentro de nuestras
+                                        capacidades dando servicios a los objetivos principales que
+                                        se
+                                        quería alcanzar, estos
+                                        objetivos
+                                        serían:
+                                    </p>
+                                    <ol>
+                                        <p>
+                                            La capacidad de manejar un gran número de peticiones
+                                            hacia nuestro servidor, debido a
+                                            que
+                                            nuestra aplicación está dirigida a los gamers, los picos
+                                            más altos de tráfico que hemos
+                                            identificado
+                                            serían 20:00 a 00:00 o 1:00 entre semana con un tráfico
+                                            de aproximádamente 2100 y los
+                                            fines
+                                            de semana tenemos un
+                                            pico de tráfico alrededor de usuarios de 4269 a altas
+                                            horas de la noche.
+                                        </p>
+                                    </ol>
+                                    <li class="li-style-on aos-init aos-animate mb-2 h4">
+                                        <span class="text-color-gN">I</span>dentificación de
+                                        usuarios</li>
+                                    <p class="text-justify">
+                                        En este programa contaremos con 2 usuarios, los cuales
+                                        serían el
+                                        usuario cliente y moderador
+                                        .
+                                        Cliente : Este usuario será de los que más opciones podrá
+                                        usar
+                                        en nuestro programa, mirar
+                                        objetivos específicos(apartado cliente).
+                                        Moderador: Este usuario la única función que cumple es la de
+                                        verificar las speedrun enviadas
+                                        de
+                                        los clientes.
+                                    </p>
+                                </ol>
+                            </ol>
+                        </ol>
                     </div>
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <h3>B. Especificación de casos de usos</h3>
-                        <h4>I. Casos de uso gestión</h4>
+                        <li class="li-style-on aos-init aos-animate mb-2 h3"><span
+                                class="text-color-gN">E</span>specificación de
+                            casos de usos</li>
+                        <ol>
+                            <li class="li-style-on aos-init aos-animate mb-2 h4"><span
+                                    class="text-color-gN">C</span>asos de uso
+                                gestión</li>
                         <p class="text-justify">
                             <img src="./resources/image/casosUso.png" style="width:75%; height:75%;"
                                 data-bs-toggle="modal" data-bs-target="#casos-uso" />
                         </p>
-
-
+                        </ol>
                     </div>
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <h3>3. Modelo conceptual de datos</h3>
+                        <li class="li-style-on aos-init aos-animate mb-2 h3"><span
+                                class="text-color-gN">M</span>odelo conceptual de datos</li>
                         <p class="text-justify">
                             <img src="./resources/image/modeloDatos.png" style="width:75%; height:75%;"
                                 data-bs-toggle="modal" data-bs-target="#modeloDatos" />
                         </p>
                     </div>
                     <div class="col-sm-12 col-md-12 col-xl-12">
-                        <h3>4. Arquitectura de software de la solución</h3>
-                        <p>
-                            <img src="./resources/image/ArquitecturaSoftware.png" style="width:75%; height:75%;"
+                        <li class="li-style-on aos-init aos-animate mb-2 h3"><span
+                                class="text-color-gN">A</span>rquitectura de software de la solución
+                        </li>
+                        <p class="text-justify">
+                             <img src="./resources/image/ArquitecturaSoftware.png" style="width:75%; height:75%;"
                                 data-bs-toggle="modal" data-bs-target="#arquitecturaSoftware" />
                         </p>
                     </div>
@@ -2430,7 +2653,7 @@
             </div>
         </div>
         <!-- Webgrafia -->
-        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="webgrafia">
+        <section data-aos="fade-up" class="ts-block ts-xs-text-center pb-0" id="Webgrefia">
             <div class="container">
                 <div class="ts-title text-center mb-5">
                     <h2><span class="text-color-gN">Web</span>grafía</h2>
@@ -2448,13 +2671,15 @@
                                 <a href="https://www.amazon.es/">Amazon</a>
                             </li>
                             <li class="li-style-on aos-init aos-animate">
-                                <a href="https://aws.amazon.com/microservices/">AWS Monolithic vs. Microservices
+                                <a href="https://aws.amazon.com/microservices/">AWS Monolithic vs.
+                                    Microservices
                                     Architecture</a>
                             </li>
                             <li class="li-style-on aos-init aos-animate">
                                 <a
                                     href="https://medium.com/geekculture/how-to-estimate-vcpu-core-memory-disk-size-for-a-cloud-server-31fa26c883f5">
-                                    How to Estimate vCPU Core, Memory & Disk Size for a Cloud Server?</a>
+                                    How to Estimate vCPU Core, Memory & Disk Size for a Cloud
+                                    Server?</a>
                             </li>
                             <li class="li-style-on aos-init aos-animate">
                                 <a href="https://www.pccomponentes.com/">Pccomponentes</a>
@@ -2474,10 +2699,11 @@
         </section>
         <!--FIN Anexo-->
         <footer data-aos="fade-up" class="mt-5">
-            <section class="ts-block" id="contacto">
+            <section class="ts-block" id="Contacto">
                 <div class="container">
                     <div class="text-center mt-5 mb-5">
-                        <h2 class="ts-bubble-border">Ponte en <span class="text-color-gN">contacto</span></h2>
+                        <h2 class="ts-bubble-border">Ponte en <span
+                                class="text-color-gN">contacto</span></h2>
                     </div>
                     <div class="row ">
                         <div class="col-sm-8 col-md-4 mb-4">
@@ -2485,7 +2711,6 @@
                             <h5>Dirección</h5>
                             <div class="opacity-50 ">
                                 <figure class="mb-0">Bilbao, España</figure>
-                                <figure>Calle Maria Diaz de Haro, 48010</figure>
                             </div>
 
                             <!--end opacity-50 -->
@@ -2543,8 +2768,9 @@
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
                                                 <label for="form-contact-name">Nombre *</label>
-                                                <input type="text" class="forms-control" id="form-contact-name"
-                                                    name="name" placeholder="Nombre" required>
+                                                <input type="text" class="forms-control"
+                                                    id="form-contact-name" name="name"
+                                                    placeholder="Nombre" required>
                                             </div>
                                             <!--end form-group -->
                                         </div>
@@ -2552,8 +2778,9 @@
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
                                                 <label for="form-contact-email">Correo *</label>
-                                                <input type="email" class="forms-control" id="form-contact-email"
-                                                    name="email" placeholder="Correo" required>
+                                                <input type="email" class="forms-control"
+                                                    id="form-contact-email" name="email"
+                                                    placeholder="Correo" required>
                                             </div>
                                             <!--end form-group -->
                                         </div>
@@ -2562,16 +2789,19 @@
                                     <!--end row -->
                                     <div class="form-group">
                                         <label for="form-contact-subject">Asunto *</label>
-                                        <input type="text" class="forms-control" id="form-contact-subject"
-                                            name="subject" placeholder="Asunto" required>
+                                        <input type="text" class="forms-control"
+                                            id="form-contact-subject" name="subject"
+                                            placeholder="Asunto" required>
                                     </div>
                                     <!--end form-group -->
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="form-contact-message">Mensaje *</label>
-                                                <textarea class="forms-control" id="form-contact-message" rows="5"
-                                                    name="message" placeholder="Mensaje" required></textarea>
+                                                <textarea class="forms-control"
+                                                    id="form-contact-message" rows="5"
+                                                    name="message" placeholder="Mensaje"
+                                                    required></textarea>
                                             </div>
                                             <!--end form-group -->
                                         </div>
@@ -2614,5 +2844,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
     integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  var controller=new ScrollMagic.Controller({});new ScrollMagic.Scene({triggerElement:"#Inicio",duration:"110%"}).setClassToggle("#InicioR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Nosotros",duration:"50%"}).setClassToggle("#NosotrosR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Objetivo",duration:"130%"}).setClassToggle("#ObjetivoR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Tarea",duration:"150%"}).setClassToggle("#TareaR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Recursos",duration:"60%"}).setClassToggle("#RecursosR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Cronograma",duration:"100%"}).setClassToggle("#CronogramaR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Presupuesto",duration:"160%"}).setClassToggle("#PresupuestoR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Seguimiento",duration:"90%"}).setClassToggle("#SeguimientoR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Evaluacion",duration:"180%"}).setClassToggle("#EvaluacionR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Anexo",duration:"260%"}).setClassToggle("#AnexoR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Webgrefia",duration:"50%"}).setClassToggle("#WebgrefiaR","active").addTo(controller);new ScrollMagic.Scene({triggerElement:"#Contacto",duration:"100%"}).setClassToggle("#ContactoR","active").addTo(controller);
+</script>
 
 </html>
